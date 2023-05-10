@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./scss/variables.scss";
+@import "./scss/colors.scss";
+html {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #282a32;
+  // overrides
+  --tui-radius-m: 0.5rem;
+  --tui-height-m: 2.4rem;
+}
+
+[tuiButton] {
+  padding: 1rem;
+}
+
+[tuiWrapper][data-appearance="textfield"] {
+  box-shadow: none;
+}

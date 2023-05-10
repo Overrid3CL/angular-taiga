@@ -1,0 +1,36 @@
+<span class="tui-text_h5 titulo">Settings</span>
+<div class="container-settings">
+  <div class="menu">
+    <nav>
+      <ul>
+        <li routerLinkActive="active-link" [routerLink]="['./general']">
+          <a>Home</a>
+        </li>
+        <li
+          routerLinkActive="active-link"
+          [routerLink]="['./login-connections']"
+        >
+          <a>Login connections</a>
+        </li>
+        <li routerLinkActive="active-link" [routerLink]="['./teams']">
+          <a>Teams</a>
+        </li>
+        <li routerLinkActive="active-link" [routerLink]="['./billing']">
+          <a>Billing</a>
+        </li>
+        <li routerLinkActive="active-link" [routerLink]="['./invoices']">
+          <a>Invoices</a>
+        </li>
+        <li
+          routerLinkActive="active-link"
+          [routerLink]="['./my-notifications']"
+        >
+          <a>My notifications</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

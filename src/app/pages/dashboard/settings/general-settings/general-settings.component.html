@@ -1,0 +1,41 @@
+<tui-island class="container">
+  <h3 class="tui-island__title">Your Name</h3>
+  <p class="tui-island__paragraph">
+    Please enter your full name, or a display name you are comfortable with.
+  </p>
+  <form class="b-form" [formGroup]="nameForm">
+    <tui-input
+      tuiTextfieldSize="m"
+      [tuiTextfieldLabelOutside]="true"
+      formControlName="name"
+    >
+      Type an email
+      <input tuiTextfield type="email" />
+    </tui-input>
+  </form>
+
+  <div class="island-footer">
+    <div class="footer">
+      <span class="tui-text_body-s">Please use 32 characters at maximum.</span>
+      <button tuiButton type="button" size="m">Save</button>
+    </div>
+  </div>
+</tui-island>
+
+<tui-island class="danger">
+  <h3 class="tui-island__title danger-text">Delete Personal Account</h3>
+  <p class="tui-island__paragraph">
+    Permanently remove your Personal Account and all of its contents from the
+    platform. This action is not reversible, so please continue with caution.
+  </p>
+  <button
+    tuiButton
+    type="button"
+    appearance="flat"
+    size="m"
+    class="tui-island__footer-button"
+    appearance="secondary-destructive"
+  >
+    Delete personal account
+  </button>
+</tui-island>

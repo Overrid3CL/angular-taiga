@@ -1,0 +1,118 @@
+@use "src/scss/colors" as color;
+@use "src/scss/variables" as variables;
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--tui-text-01);
+  text-decoration: none;
+
+  margin-right: 20px;
+}
+.active-link {
+  background-color: var(--tui-secondary);
+  font-weight: 700;
+}
+
+.active-link a {
+  color: var(--tui-primary);
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  ul {
+    list-style: none;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 0.2rem;
+      a {
+        text-decoration: none;
+        color: var(--tui-text-01);
+
+        &:hover {
+          color: #0066cc;
+        }
+      }
+
+      &.container {
+        background-color: #0066cc;
+        color: #fff;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      &.home-works {
+        font-size: 1rem;
+      }
+    }
+
+    li:hover {
+      background: var(--tui-secondary);
+
+      a {
+        color: var(--tui-primary);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+.icons-section {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-top: 4px;
+}
+
+[data-appearance="custom"] {
+  color: var(--tui-text-01);
+
+  // @mixin wrapper-hover {
+  //   background: #a381ff;
+  // }
+
+  // @mixin wrapper-active {
+  //   background: #8f75d1;
+  // }
+
+  // @mixin wrapper-disabled {
+  //   background: #eaecee;
+  // }
+
+  // @include wrapper-hover;
+  // @include wrapper-active;
+  // @include wrapper-disabled;
+}
+
+[data-appearance="custom"]:hover {
+  background: var(--tui-secondary);
+  color: var(--tui-primary);
+  transition: none;
+}

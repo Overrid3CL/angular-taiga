@@ -1,0 +1,32 @@
+:host {
+  height: 100%;
+  display: block;
+}
+.grid-container > * {
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 56px auto;
+  grid-template-areas: "header" "main";
+}
+
+.header {
+  grid-area: header;
+  border-bottom: 2px solid var(--tui-base-02);
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: var(--tui-base-01);
+  display: flex;
+}
+
+.main {
+  grid-area: main;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 15px;
+}
+.footer {
+  grid-area: footer;
+}
